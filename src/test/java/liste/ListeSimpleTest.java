@@ -297,16 +297,16 @@ public class ListeSimpleTest {
 
     @Test
     public void testEchangerAvecR2CommeTete() {
-        ListeSimple liste = new ListeSimple();
-        liste.ajout(3);
-        liste.ajout(2);
-        liste.ajout(1);
-
-        Noeud r2 = liste.tete;
-        Noeud r1 = liste.tete.getSuivant().getSuivant();
-
-        liste.echanger(r1, r2);
-
-        assertEquals("ListeSimple(Noeud(3), Noeud(2), Noeud(1))", liste.toString());
+        listeATester.ajout(5);
+        listeATester.ajout(4);
+        Noeud r1 = listeATester.tete;
+        listeATester.ajout(3);
+        listeATester.ajout(2);
+        listeATester.ajout(1);
+        Noeud r2 = listeATester.tete;
+        assertEquals("ListeSimple(Noeud(1), Noeud(2), Noeud(3), Noeud(4), Noeud(5))", listeATester.toString());
+        listeATester.echanger(r1, r2);
+        System.out.println(listeATester);
+        assertEquals("ListeSimple(Noeud(4), Noeud(2), Noeud(3), Noeud(1), Noeud(5))", listeATester.toString());
     }
 }
