@@ -307,6 +307,6 @@ public class ListeSimpleTest {
 
         liste.echanger(r1, r2);
 
-        assertEquals("ListeSimple(3, 2, 1)", liste.toString());
+        assertEquals("ListeSimple(Noeud(3), Noeud(2), Noeud(1))", liste.toString());
     }
 }
