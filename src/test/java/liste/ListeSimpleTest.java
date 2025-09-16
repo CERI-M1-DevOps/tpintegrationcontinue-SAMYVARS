@@ -296,16 +296,20 @@ public class ListeSimpleTest {
     }
 
     @Test
-    public void echangerAvecTeteEnSecondArgument() {
+    public void echangerAvecTeteSecond() {
         listeATester.ajout(1);
         listeATester.ajout(2);
         listeATester.ajout(3);
-        listeATester.ajout(4);
-        Noeud r1 = listeATester.tete.getSuivant().getSuivant();
+
         Noeud r2 = listeATester.tete;
-        assertEquals("ListeSimple(Noeud(4), Noeud(3), Noeud(2), Noeud(1))", listeATester.toString());
+        Noeud r1 = listeATester.tete.getSuivant();
+
+        assertNotEquals(r1, listeATester.tete);
+        assertEquals(r2, listeATester.tete);
+
         listeATester.echanger(r1, r2);
-        assertEquals("ListeSimple(Noeud(2), Noeud(3), Noeud(4), Noeud(1))", listeATester.toString());
+
+        assertEquals(r1, listeATester.tete);
         assertEquals(2, listeATester.tete.getElement());
     }
 }
