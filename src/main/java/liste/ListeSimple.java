@@ -4,6 +4,7 @@ public class ListeSimple {
     private long size;
     Noeud tete;
 
+
     public long getSize() {
         return size;
     }
