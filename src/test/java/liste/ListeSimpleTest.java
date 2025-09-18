@@ -256,6 +256,7 @@ public class ListeSimpleTest {
         assertEquals(listeATester.toString(), "ListeSimple(Noeud(4), Noeud(2), Noeud(3), Noeud(1), Noeud(5))");
     }
 
+
     @Test
     public void modifiePremierElementAbsent() {
         listeATester.ajout(1);
