@@ -8,11 +8,20 @@ public class ListeSimple {
         return size;
     }
 
+    /**
+     * Ajoute un nouvel élément au début de la liste.
+     * @param element la valeur à ajouter à la liste
+     */
     public void ajout(int element) {
         tete = new Noeud(element, tete);
         size++;
     }
 
+    /**
+     * Modifie la valeur du premier noeud contenant l'\élément spécifié.
+     * @param element l'\élément à rechercher dans la liste
+     * @param nouvelleValeur la nouvelle valeur à affecter au noeud trouvé
+     */
     public void modifiePremier(Object element, Object nouvelleValeur) {
         Noeud courant = tete;
         while (courant != null && courant.getElement() != element)
@@ -106,6 +115,11 @@ public class ListeSimple {
         tete = precedent;
     }
 
+    /**
+     * Retourne le noeud précédent d'un noeud donné dans la liste.
+     * @param r le noeud dont on cherche le précédent
+     * @return le noeud précédent de r dans la liste
+     */
     public Noeud getPrecedent(Noeud r) {
     // la liste n'est pas vide puisqu'on transmet un Node de la liste et le Node existe obligatoirement
         Noeud precedent = tete;
